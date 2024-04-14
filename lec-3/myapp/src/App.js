@@ -1,19 +1,10 @@
 import './App.css';
-import Tag1, {Tag2, Tag3 ,Tag4, Tag5, Para1, Para2, Para3, Para4, Para5} from './components/Script';
+import Style from './Component/Style';
 
 function App() {
   return (
     <div className="App">
-      <Tag1/>
-      <Tag2/>
-      <Tag3/>
-      <Tag4/>
-      <Tag5/>
-      <Para1/>
-      <Para2/>
-      <Para3/>
-      <Para4/>
-      <Para5/>
+      <Style/>
     </div>
   );
 }

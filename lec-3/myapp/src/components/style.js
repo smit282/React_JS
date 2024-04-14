@@ -1,42 +1,15 @@
-function Tag1(){
-    return <p>react</p>
+import React from 'react'
+import "../Component/Style.css"
+
+const style = () => {
+  return (
+    <div>
+        <h1>this is heading tag</h1>
+        <h1 style={{color:'green', backgroundColor:'aqua'}}>this is heading tag</h1>
+        <h1>this is heading tag</h1>
+        <h1>this is heading tag</h1>
+    </div>
+  )
 }
 
-function Tag2(){
-    return <p>react</p>
-}
-
-function Tag3(){
-    return <p>react</p>
-}
-
-function Tag4(){
-    return <p>react</p>
-}
-
-function Tag5(){
-    return <p>react</p>
-}
-
-function Para1(){
-    return <h1>react</h1>
-}
-
-function Para2(){
-    return <h1>react</h1>
-}
-
-function Para3(){
-    return <h1 className="style">react</h1>
-}
-
-function Para4(){
-    return <h1>react</h1>
-}
-
-function Para5(){
-    return <h1>react</h1>
-}
-
-export default Tag1;
-export {Tag2, Tag3, Tag4, Tag5, Para1, Para2, Para3, Para4, Para5}
+export default style
