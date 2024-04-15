@@ -4,7 +4,7 @@ import Destructuring from './components/Destructuring';
 function App() {
   return (
     <div className="App">
-      <Destructuring/>
+      <Destructuring active="Smit Thummar"  activeStatus = "Frontend Devloper"/>
     </div>
   );
 }
