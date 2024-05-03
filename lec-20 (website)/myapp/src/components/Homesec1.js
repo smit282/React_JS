@@ -25,9 +25,9 @@ import img28 from './assets/product-17.jpg'
 // import img29 from './assets/product-18.jpg'
 import img30 from './assets/product-19.jpg'
 // import img31 from './assets/product-20.jpg'
-import './Homepage1.css'
+import './Homesec1.css'
 
-function Homepage1() {
+function Homesec1() {
   return (
     <div className='container'>
       <h1 className='text-start mx-10 mt-5 text-2xl font-bold'>Top <span className='font-normal text-red-500'>Categories</span></h1>
@@ -145,4 +145,4 @@ function Homepage1() {
   )
 }
 
-export default Homepage1
+export default Homesec1

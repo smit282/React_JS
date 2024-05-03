@@ -2,7 +2,8 @@
 import './App.css'
 import Navbar from './components/Navbar';
 import Headerslider from './components/Headerslider';
-import Homepage1 from './components/Homepage1';
+import Homesec1 from './components/Homesec1';
+import Homesec2 from './components/Homesec2';
 import Footer from './components/Footer';
 
 
@@ -15,7 +16,8 @@ function App() {
           {/* <Route path="/" element={<Home/>}/>
           <Route path="#" element={<Homepage/>}/> */}
           <Headerslider/>
-          <Homepage1/>
+          <Homesec1/>
+          <Homesec2/>
         {/* </Routes> */}
         <Footer/>
       {/* </BrowserRouter> */}
