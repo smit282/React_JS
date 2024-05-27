@@ -1,0 +1,27 @@
+
+.ProductCard-Head #ProductCard-link img:nth-child(2){
+    opacity: 0;   
+    z-index: 1;
+    transition: all .3s linear;
+}
+
+.ProductCard-Head:hover #ProductCard-link img:nth-child(2){
+    opacity: 1;
+    z-index: 2;
+}
+
+.ProductCard-Head .ProductCard-Buttons{
+    inset: 0;
+    z-index: 10;
+    margin: auto;
+    height: 50px;
+    width: 180px;
+    top: 150px;
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+.ProductCard-Head:hover .ProductCard-Buttons{
+    top: 0%;
+    visibility:visible;
+}

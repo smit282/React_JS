@@ -1,0 +1,10 @@
+.get:hover
+{
+    background-color: #D51243;
+    color: white;
+    transition: 0.5s;
+    .get-i{
+        color: white;
+        transition: 0.5s;
+    }
+}
