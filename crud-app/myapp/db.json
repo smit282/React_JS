@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": "e2f3",
+      "firstname": "smit",
+      "lastname": "thummar",
+      "age": "19",
+      "city": "baroda"
+    },
+    {
+      "id": "c364",
+      "firstname": "jayan",
+      "lastname": "dudakiya",
+      "age": "22",
+      "city": "amdavad"
+    },
+    {
+      "id": "f144",
+      "firstname": "sahil",
+      "lastname": "dudhat",
+      "age": "22",
+      "city": "gandhinagar"
+    },
+    {
+      "id": "cbb6",
+      "firstname": "piyush",
+      "lastname": "suhagiya",
+      "age": "28",
+      "city": "rajkot"
+    }
+  ]
+}
