@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": "1b8d",
+      "firstname": "akshay",
+      "lastname": "goti",
+      "age": "19",
+      "city": "baroda"
+    },
+    {
+      "id": "9241",
+      "firstname": "jayan",
+      "lastname": "dudakiya",
+      "age": "22",
+      "city": "gandhinagar"
+    },
+    {
+      "id": "9077",
+      "firstname": "sahil",
+      "lastname": "dudhat",
+      "age": "22",
+      "city": "amdavad"
+    },
+    {
+      "id": "869c",
+      "firstname": "smit",
+      "lastname": "thummar",
+      "age": "19",
+      "city": "suart"
+    },
+    {
+      "id": "3dfc",
+      "firstname": "piyush",
+      "lastname": "suhagiya",
+      "age": "32",
+      "city": "rajkot"
+    }
+  ]
+}
