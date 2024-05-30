@@ -13,12 +13,12 @@ function Add() {
   const onSubmitStudent = (e) => {
     e.preventDefault();
     axios.post("http://localhost:3001/data", student)
-    navigate("/");
+    navigate("/");  
   }
   return (
     <section>
       <div className="pt-10">
-        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
+        <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md shadow-xl p-5 rounded-lg shadow-blue-300">
           <h2 className="text-3xl font-bold leading-tight text-blue-700 sm:text-4xl">Add Student</h2>
           <form action="#" onSubmit={onSubmitStudent} method="POST" className="mt-8">
             <div className="space-y-5 text-start">
