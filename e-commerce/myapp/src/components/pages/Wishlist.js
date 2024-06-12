@@ -16,7 +16,7 @@ function Wishlist() {
     const backToHome = () => {
         navigate("/");
     };
-    
+
     const dispatch = useDispatch();
 
     const WishRemove = (id) => {
@@ -26,6 +26,14 @@ function Wishlist() {
     const WishlistlistItem = useSelector((state) => state.cartreducer.wishlist)
     console.log(WishlistlistItem);
 
+    // const increment_Qut = (item) => {
+    //     dispatch(WISH_QUT_INCREASE(item))
+    // }
+
+    // const decrease_Qut = (item) => {
+    //     dispatch(WISH_QUT_DECREASE(item))
+    // }
+
     return (
         <div>
             <Categories />
@@ -34,7 +42,7 @@ function Wishlist() {
                 <div className='text-start mx-10 space-y-3 py-11'>
                     <div className='flex space-x-2'>
                         <p onClick={backToHome} className='cursor-pointer hover:text-rose-600 duration-500'>Home</p>
-                        <p className='text-gray-500 flex'><IoRemoveOutline className='text-3xl text-gray-300'/>Wishlist</p>
+                        <p className='text-gray-500 flex'><IoRemoveOutline className='text-3xl text-gray-300' />Wishlist</p>
                     </div>
                     <h1 className='text-4xl font-bold'>Wishlist</h1>
                 </div>
@@ -50,7 +58,6 @@ function Wishlist() {
                             <th className="px-4 py-1.5 border text-center text-lg font-bold">Total</th>
                             <th className="px-4 py-1.5 border text-center text-lg font-bold">Add To Cart</th>
                             <th className="px-4 py-1.5 border text-center text-lg font-bold">Remove</th>
-
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 bg-white text-center">

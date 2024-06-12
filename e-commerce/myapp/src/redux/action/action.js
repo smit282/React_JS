@@ -25,7 +25,6 @@ export const REMOVE_cart = (id) => {
     }
 }
 
-
 export const ADDWISh = (item) => {
     return {
         type: "ADD_TO_WISH",

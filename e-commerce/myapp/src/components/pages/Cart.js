@@ -6,7 +6,7 @@ import './errorpage/Error.css'
 import { IoRemoveOutline } from "react-icons/io5";
 
 import { useSelector, useDispatch } from 'react-redux'
-import { REMOVE_cart , CART_QUT_INCREASE, CART_QUT_DECREASE } from '../../redux/action/action';
+import { REMOVE_cart, CART_QUT_INCREASE, CART_QUT_DECREASE } from '../../redux/action/action';
 import { useNavigate } from 'react-router-dom';
 function Cart() {
 
@@ -78,10 +78,8 @@ function Cart() {
                                             <a href="#" className='product-name'>{productName}</a>
                                         </td>
                                         <td>{Price}</td>
-                                        <td className=''>
-                                            {/* <input type="number" min={1} defaultValue={1} name='qty' className='qty' /> */}
-                                            {/* <input type="number" onClick={()=>increment_Qut(item)} name='qty' className='qty' /> */}
-                                            <input type="number" onClick={()=>decrease_Qut(item)} name='qty' className='qty' />
+                                        <td className="whitespace-nowrap">
+                                            <input type="number" min={1} defaultValue={1} name='qty' className='qty' />
                                         </td>
                                         <td>{Price}</td>
                                         <td>
