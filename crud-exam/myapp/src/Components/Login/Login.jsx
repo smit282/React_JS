@@ -1,9 +1,65 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { Waring_Alert, Success_Alert, Error_Alert } from "../Alert"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
+  const [user, setUser] = useState({
+    email: "",
+    password: ""
+  })
+  const NaviGatTablePage = useNavigate()
+
+  const [LocalData, setLocalData] = useState([])
+
+  function getLocalData() {
+    setLocalData(JSON.parse(localStorage.getItem("crudUser")))
+  }
+
+  useEffect(() => {
+    getLocalData()
+  }, [])
+
+  console.log("LocalData", LocalData);
+
+
+  const getInputVal = (even) => {
+    const { name, value } = even.target;
+    setUser(prevVal => {
+      return {
+        ...prevVal,
+        [name]: value,
+      }
+    })
+  }
+
+  const HandelSubmit = (even) => {
+    even.preventDefault();
+
+    const { email, password } = user
+    if (email === "") {
+      Waring_Alert("Email Fild Is Required")
+    } else if (password === "") {
+      Waring_Alert("Password Fild Is Required")
+    } else {
+      const FindUser = LocalData.findIndex((X) => X.email === email && X.password === password)
+      if (FindUser !== -1) {
+        Success_Alert("User LogIn Is SuccessFull")
+        setTimeout(() => {
+          NaviGatTablePage('/tablePage')
+        }, 2200);
+      } else {
+        Error_Alert("User Not Login Email Or Password must Be Wrong !")
+      }
+
+      even.target.reset();
+    }
+  }
   return (
     <section>
+      <ToastContainer/>
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
           <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
@@ -18,7 +74,7 @@ function Login() {
                 Create a free account
               </a>
             </p>
-            <form action="#" method="POST" className="mt-8">
+            <form onSubmit={HandelSubmit} action="#" method="POST" className="mt-8">
               <div className="space-y-5">
                 <div>
                   <label htmlFor="" className="text-base font-medium text-gray-900">
@@ -30,6 +86,7 @@ function Login() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       placeholder="Email"
+                      onChange={getInputVal}
                     ></input>
                   </div>
                 </div>
@@ -53,6 +110,7 @@ function Login() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
+                      onChange={getInputVal}
                     ></input>
                   </div>
                 </div>
