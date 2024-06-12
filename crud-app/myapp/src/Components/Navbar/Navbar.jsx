@@ -26,7 +26,7 @@ function Navbar() {
   }
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-blue-100">
       <div className="mx-auto flex items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <span>
@@ -41,18 +41,18 @@ function Navbar() {
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <Link to={item.to} className="inline-flex items-center text-sm font-semibold text-blue-300 hover:text-blue-700 hover:duration-200 hover:-translate-y-1">
+                <Link to={item.to} className="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-700 hover:duration-200 hover:-translate-y-1">
                   {item.name}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="hidden space-x-2 lg:block">
-          <button type="button" className="px-3 py-2 text-sm font-semibold text-blue-300 hover:text-blue-700 hover:duration-200 hover:-translate-y-1">
+        <div className="hidden space-x-2 lg:block text-blue-400">
+          <button type="button" className="px-3 py-2 text-sm font-semibold hover:text-blue-700 hover:duration-200 hover:-translate-y-1">
             <Link to='/register'>Sign Up</Link>
           </button>
-          <button type="button" className="px-3 py-2 text-sm font-semibold text-blue-300 hover:text-blue-700 hover:duration-200 hover:-translate-y-1">
+          <button type="button" className="px-3 py-2 text-sm font-semibold hover:text-blue-700 hover:duration-200 hover:-translate-y-1">
             <Link to='/login'>Log In</Link>
           </button>
         </div>
